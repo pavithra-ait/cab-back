@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "./dest",
+        "rootDir": "./src",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "types": [
+            "jest"
+        ],
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true
+    },
+    "lib": [
+        "es2015"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "multer.d.ts"
+    ]
+}
