@@ -6,8 +6,7 @@ import userroute from './Route/usercontroller';
 import driverroute from './Route/driverroute';
 import taxiroute from './Route/taxiroute';
 import bookroute from './Route/Booking';
-import paymentroute from './Route/paymentroute';
-import completeTrip from './Auth/trip';
+import paymentroute from './Auth/paymentauth';
 
 const app = express();
 const port = 4001;
@@ -25,7 +24,6 @@ app.use('/api/driver', driverroute);
 app.use('/api/taxi', taxiroute);
 app.use('/api/book', bookroute);
 app.use('/api/payment', paymentroute);
-app.post('/api/complete-trip', completeTrip);
 
 
 app.listen(port, () => {
