@@ -17,13 +17,13 @@ const corsorigin = {
 
 connectdb()
 app.use(cors(corsorigin))
-app.use(bodyParser.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/api/user', userroute);
 app.use('/api/driver', driverroute);
 app.use('/api/taxi', taxiroute);
 app.use('/api/book', bookroute);
-app.use('/api/payment', paymentroute);
+app.use('/api', paymentroute);
 
 
 app.listen(port, () => {
