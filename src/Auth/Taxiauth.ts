@@ -57,9 +57,10 @@ class TaxiController {
                 available: req.body.available
             });
 
-            res.status(201).json(newTaxi);
+            await newTaxi.save();
+            return res.status(201).json(newTaxi);
         } catch (error) {
-            res.status(500).json({ error: (error as Error).message });
+          return  res.status(500).json({ error: (error as Error).message });
         }
     }
 
